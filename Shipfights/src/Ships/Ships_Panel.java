@@ -12,7 +12,7 @@ public class Ships_Panel extends JPanel {
 	static int width = 1200;
 	static int height = 1200;
 	static int y0 = 200;
-	
+	static int test11111; 
 	
 	public Ships_Panel() {
 		setBackground(Color.gray);
