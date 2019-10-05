@@ -41,20 +41,20 @@ public class Ship_Frame extends JFrame {
 		setTitle("Shiffe versenken ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 1000);
-		contentPane = new Ships_Panel();
+		contentPane = new Hanno();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
 		
-		panel.setBounds(0, 0, 994, 200);
+		panel.setBounds(0, 0, 994, 100);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		menuGame = new JMenuBar();
 		menuGame.setFont(new Font("Segoe UI", Font.PLAIN, 35));
-		menuGame.setBounds(10, 0, 127, 54);
+		menuGame.setBounds(21, 21, 127, 54);
 		panel.add(menuGame);
 		
 		JMenu mnGame = new JMenu("Game");
@@ -76,7 +76,7 @@ public class Ship_Frame extends JFrame {
 		
 		JMenuBar menuShips = new JMenuBar();
 		menuShips.setFont(new Font("Segoe UI", Font.PLAIN, 35));
-		menuShips.setBounds(10, 62, 127, 54);
+		menuShips.setBounds(180, 21, 127, 54);
 		panel.add(menuShips);
 		
 		JMenu mnShips = new JMenu("Ships");
@@ -86,7 +86,9 @@ public class Ship_Frame extends JFrame {
 		JMenuItem m1 = new JMenuItem("1x1");
 		m1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//1x1
+			//1x1
+			Hanno.getInformations(1);
+			
 			}
 		});
 		m1.setFont(new Font("Segoe UI", Font.PLAIN, 35));
@@ -96,6 +98,8 @@ public class Ship_Frame extends JFrame {
 		m2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			//2x1
+			Hanno.getInformations(1);
+				
 			}
 		});
 		m2.setFont(new Font("Segoe UI", Font.PLAIN, 35));
@@ -105,6 +109,8 @@ public class Ship_Frame extends JFrame {
 		m3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			//3x1
+			Hanno.getInformations(3);
+				
 			}
 		});
 		m3.setFont(new Font("Segoe UI", Font.PLAIN, 35));
@@ -113,7 +119,9 @@ public class Ship_Frame extends JFrame {
 		JMenuItem m5 = new JMenuItem("5x1");
 		m5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//5x1
+			//5x1
+			Hanno.getInformations(5);
+				
 			}
 		});
 		m5.setFont(new Font("Segoe UI", Font.PLAIN, 35));
