@@ -1,3 +1,4 @@
+package Ships;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -5,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Test extends JFrame {
+public class Ship_Frame extends JFrame {
 
 	private JPanel contentPane;
 
@@ -16,7 +17,7 @@ public class Test extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Test frame = new Test();
+					Ship_Frame frame = new Ship_Frame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -28,13 +29,18 @@ public class Test extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Test() {
+	public Ship_Frame() {
+		setTitle("Shiffe versenken ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+		setBounds(100, 100, 1200, 1200);
+		setResizable(false);
+		contentPane = new Ships_Panel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 1194, 200);
+		contentPane.add(panel);
 	}
-
 }
