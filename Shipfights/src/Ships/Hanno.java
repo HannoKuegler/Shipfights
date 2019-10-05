@@ -29,13 +29,22 @@ public class Hanno extends JPanel implements MouseListener {
 		
 	}
 
+	public void calcLines() {
+		
+		
+		
+		
+	}
+	
+	
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		
 		int mouseX = e.getX(); 
 		int mouseY = e.getY(); 
 
- 
+		
 		
 		
 		

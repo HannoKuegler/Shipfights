@@ -40,6 +40,7 @@ public class Ship_Frame extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		
 		panel.setBounds(0, 0, 1194, 200);
 		contentPane.add(panel);
 	}
