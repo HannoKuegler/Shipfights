@@ -11,8 +11,8 @@ public class Hanno extends JPanel implements MouseListener {
 
 	Graphics2D g; 
 
-	static int width = 1200;
-	static int height = 1200;
+	static int width = 1000;
+	static int height = 1000;
 	static int y0 = 200;
 	
 	
@@ -29,13 +29,6 @@ public class Hanno extends JPanel implements MouseListener {
 		
 	}
 
-	public void calcLines() {
-		
-		
-		
-		
-	}
-	
 	
 	
 	@Override
@@ -43,7 +36,8 @@ public class Hanno extends JPanel implements MouseListener {
 		
 		int mouseX = e.getX(); 
 		int mouseY = e.getY(); 
-
+		
+		
 		
 		
 		
