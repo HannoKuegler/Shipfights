@@ -88,7 +88,7 @@ public class Ship_Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			//1x1
 			Hanno.getInformations(1);
-			
+			System.out.println("1");
 			}
 		});
 		m1.setFont(new Font("Segoe UI", Font.PLAIN, 35));

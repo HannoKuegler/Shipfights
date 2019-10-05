@@ -5,13 +5,16 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JPanel;
 
-public class Hanno extends JPanel implements MouseListener {
+public class Hanno extends JPanel implements MouseListener, MouseMotionListener {
 
-	Graphics2D g;
+	public static Graphics2D g;
 
+	static int mouseX;
+	static int mouseY;
 	static int width = 1000;
 	static int height = 1000;
 	static int y0 = 200;
@@ -20,44 +23,22 @@ public class Hanno extends JPanel implements MouseListener {
 	static int ship;
 
 	public Hanno() {
-
-		setBackground(Color.green);
+		this.addMouseListener(this);
+		this.addMouseMotionListener(this);
 	}
 
 	@Override
 	protected void paintComponent(Graphics gr) {
 		// TODO Auto-generated method stub
 		super.paintComponent(gr);
-
 		g = (Graphics2D) gr;
 
-	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-
-		int mouseX = e.getX();
-		int mouseY = e.getY();
-
-		g.setColor(Color.BLUE);
+		if(ship == 1) {
+			drawMouse(mouseX, mouseY);	
+			System.out.println("Hello");
+			}
 		
-		switch (ship) {
-		case 1:
-			g.fillRect(mouseX-thick/2, mouseY-thick/2, thick, thick);
-			
-			break;
-		case 2:
-
-			break;
-		case 3:
-
-			break;
-		case 5:
-
-		default:
-			break;
-		}
-
 	}
 
 	public static void getInformations(int s) {
@@ -65,13 +46,42 @@ public class Hanno extends JPanel implements MouseListener {
 		ship = s;
 
 	}
+	
+	public static void drawMouse(int mouseX, int mouseY) {
+		g.setColor(Color.BLUE);
+		g.fillRect(mouseX-thick/2, mouseY-thick/2, thick, thick);
+	}
+	
+	
+	
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		
+		
+	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-
+	
 	}
+	
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+		mouseX = e.getX();
+		mouseY = e.getY();
 
+		
+		
+		if(ship == 1) {
+		drawMouse(mouseX, mouseY);	
+		System.out.println("Hello");
+		}
+		
+		repaint();
+	}
+	
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -89,5 +99,13 @@ public class Hanno extends JPanel implements MouseListener {
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }
